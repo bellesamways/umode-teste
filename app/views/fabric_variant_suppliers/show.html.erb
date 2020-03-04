@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price cents:</strong>
+  <%= @fabric_variant_supplier.price_cents %>
+</p>
+
+<p>
+  <strong>Price currency:</strong>
+  <%= @fabric_variant_supplier.price_currency %>
+</p>
+
+<p>
+  <strong>Price unit:</strong>
+  <%= @fabric_variant_supplier.price_unit %>
+</p>
+
+<p>
+  <strong>Min purchase:</strong>
+  <%= @fabric_variant_supplier.min_purchase %>
+</p>
+
+<p>
+  <strong>Fabric variant:</strong>
+  <%= @fabric_variant_supplier.fabric_variant_id %>
+</p>
+
+<%= link_to 'Edit', edit_fabric_variant_supplier_path(@fabric_variant_supplier) %> |
+<%= link_to 'Back', fabric_variant_suppliers_path %>

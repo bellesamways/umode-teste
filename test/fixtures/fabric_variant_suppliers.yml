@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price_cents: 1.5
+  price_currency: MyString
+  price_unit: MyString
+  min_purchase: 1.5
+  fabric_variant: one
+
+two:
+  price_cents: 1.5
+  price_currency: MyString
+  price_unit: MyString
+  min_purchase: 1.5
+  fabric_variant: two

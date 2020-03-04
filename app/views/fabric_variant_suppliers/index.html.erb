@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fabric Variant Suppliers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price cents</th>
+      <th>Price currency</th>
+      <th>Price unit</th>
+      <th>Min purchase</th>
+      <th>Fabric variant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fabric_variant_suppliers.each do |fabric_variant_supplier| %>
+      <tr>
+        <td><%= fabric_variant_supplier.price_cents %></td>
+        <td><%= fabric_variant_supplier.price_currency %></td>
+        <td><%= fabric_variant_supplier.price_unit %></td>
+        <td><%= fabric_variant_supplier.min_purchase %></td>
+        <td><%= fabric_variant_supplier.fabric_variant_id %></td>
+        <td><%= link_to 'Show', fabric_variant_supplier %></td>
+        <td><%= link_to 'Edit', edit_fabric_variant_supplier_path(fabric_variant_supplier) %></td>
+        <td><%= link_to 'Destroy', fabric_variant_supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fabric Variant Supplier', new_fabric_variant_supplier_path %>

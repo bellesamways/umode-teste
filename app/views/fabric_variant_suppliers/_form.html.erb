@@ -1,0 +1,42 @@
+<%= form_with(model: fabric_variant_supplier, local: true) do |form| %>
+  <% if fabric_variant_supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fabric_variant_supplier.errors.count, "error") %> prohibited this fabric_variant_supplier from being saved:</h2>
+
+      <ul>
+        <% fabric_variant_supplier.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :price_cents %>
+    <%= form.text_field :price_cents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_currency %>
+    <%= form.text_field :price_currency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_unit %>
+    <%= form.text_field :price_unit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_purchase %>
+    <%= form.text_field :min_purchase %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabric_variant_id %>
+    <%= form.text_field :fabric_variant_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

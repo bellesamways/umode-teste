@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fabric_variant.name %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @fabric_variant.reference %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @fabric_variant.observation %>
+</p>
+
+<p>
+  <strong>Composition:</strong>
+  <%= @fabric_variant.composition %>
+</p>
+
+<p>
+  <strong>Grammage:</strong>
+  <%= @fabric_variant.grammage %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @fabric_variant.width %>
+</p>
+
+<p>
+  <strong>Fabric:</strong>
+  <%= @fabric_variant.fabric_id %>
+</p>
+
+<%= link_to 'Edit', edit_fabric_variant_path(@fabric_variant) %> |
+<%= link_to 'Back', fabric_variants_path(@fabric_variant) %> |
+<%= link_to 'FabricVariantSuppliers', fabric_fabric_variant_suppliers_path(@fabric_variant) %>

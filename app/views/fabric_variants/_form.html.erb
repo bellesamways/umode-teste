@@ -1,0 +1,52 @@
+<%= form_for @fabric_variant do |form| %>
+  <% if @fabric_variant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fabric_variant.errors.count, "error") %> prohibited this @fabric_variant from being saved:</h2>
+
+      <ul>
+        <% @fabric_variant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reference %>
+    <%= form.text_field :reference %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observation %>
+    <%= form.text_area :observation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :composition %>
+    <%= form.text_field :composition %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grammage %>
+    <%= form.text_field :grammage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :width %>
+    <%= form.text_field :width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fabric_id %>
+    <%= form.text_field :fabric_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

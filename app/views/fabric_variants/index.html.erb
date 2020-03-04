@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fabric Variants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Reference</th>
+      <th>Observation</th>
+      <th>Composition</th>
+      <th>Grammage</th>
+      <th>Width</th>
+      <th>Fabric</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fabric_variants.each do |fabric_variant| %>
+      <tr>
+        <td><%= fabric_variant.name %></td>
+        <td><%= fabric_variant.reference %></td>
+        <td><%= fabric_variant.observation %></td>
+        <td><%= fabric_variant.composition %></td>
+        <td><%= fabric_variant.grammage %></td>
+        <td><%= fabric_variant.width %></td>
+        <td><%= fabric_variant.fabric_id %></td>
+        <td><%= link_to 'Show', fabric_variant %></td>
+        <td><%= link_to 'Edit', edit_fabric_variant_path(fabric_variant) %></td>
+        <td><%= link_to 'Destroy', fabric_variant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fabric Variant', new_fabric_variant_path %>
