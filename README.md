@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O projeto é um CRUD da relação abaixo:
 
-Things you may want to cover:
+![Diagrama U.Mode](diagrama_umode.png)
 
-* Ruby version
+Essa é uma aplicação Rails 6.0.
 
-* System dependencies
+## Pré-requisitos:
 
-* Configuration
+* Essa aplicação requer **Ruby 2.5**
 
-* Database creation
+## Configuração
 
-* Database initialization
+* Verificar se a versão do Ruby está correta:
 
-* How to run the test suite
+`ruby -v`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Instalando as dependências com bundler:
 
-* Deployment instructions
+`bundle install`
 
-* ...
+* Preparando o db:
+
+`rake db:create db:migrate`
+
+* Para servir:
+
+`rails s`
+
+* Acesse com: http://localhost:3000/fabrics
